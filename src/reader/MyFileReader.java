@@ -8,12 +8,9 @@ import java.util.HashMap;
 public class MyFileReader {
 
     public HashMap<String, String> readFileLinesList(String path) {
-
         HashMap<String, String> data = new HashMap<>();
         String line;
         File file = new File(path);
-
-
         try(BufferedReader br = new BufferedReader(new FileReader(file));) {
             while ((line=br.readLine()) != null){
                 String[] splited = line.split("=");
