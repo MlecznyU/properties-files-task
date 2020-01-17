@@ -1,12 +1,14 @@
+import reader.MyFileReader;
+import reader.Path;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    private static String path;
-    public static void main(String[] args) {
 
-        System.out.println("Type patch for the file \"data.properties\" (C:\\Users\\USER(YOUR-USERNAME)\\Desktop\\data.properties)");
-        Scanner input = new Scanner(System.in);
-        input.nextLine();
-        path=input.toString();
+    public static void main(String[] args) {
+        Path path1 = new Path();
+        String path = path1.path();
+        new MyFileReader().readFileLinesList(path);
     }
 }
