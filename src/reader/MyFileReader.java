@@ -1,14 +1,13 @@
 package reader;
 
-import com.sun.jdi.Value;
-
 import java.io.*;
-import java.util.HashMap;
+import java.util.Properties;
 
 public class MyFileReader {
 
-    public HashMap<String, String> readFileLinesList(String path) {
-        HashMap<String, String> data = new HashMap<>();
+    public Properties readFileLinesList(String path) {
+        //HashMap<String, String> data = new HashMap<>();
+        Properties data = new Properties();
         String line;
         File file = new File(path);
         try(BufferedReader br = new BufferedReader(new FileReader(file));) {
